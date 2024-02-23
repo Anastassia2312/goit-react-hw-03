@@ -15,7 +15,6 @@ export default function ContactForm({ onAdd }) {
         number: "",
       }}
       onSubmit={handleSubmit}
-      validationSchema={{}}
     >
       <Form>
         <label htmlFor={usernameId}>Name</label>
