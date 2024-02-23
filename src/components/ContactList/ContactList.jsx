@@ -8,7 +8,6 @@ export default function ContactList({ contacts }) {
           <Contact info={contact} />
         </li>
       ))}
-      ;
     </ul>
   );
 }

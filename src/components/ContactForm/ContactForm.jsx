@@ -8,7 +8,14 @@ export default function ContactForm() {
     actions.resetForm();
   };
   return (
-    <Formik initialValues={{}} onSubmit={handleSubmit} validationSchema={{}}>
+    <Formik
+      initialValues={{
+        username: "",
+        number: "",
+      }}
+      onSubmit={handleSubmit}
+      validationSchema={{}}
+    >
       <Form>
         <label htmlFor={usernameId}>Name</label>
         <Field type="text" name="username" id={usernameId} />
