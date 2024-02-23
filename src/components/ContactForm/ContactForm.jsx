@@ -11,7 +11,7 @@ export default function ContactForm({ onAdd }) {
       name: values.name,
       number: values.number,
     });
-    actions.formReset();
+    actions.resetForm();
   };
   return (
     <Formik
