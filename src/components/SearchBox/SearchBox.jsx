@@ -1,5 +1,5 @@
-import { useId } from "react";
-export default function SearchForm({ value, onChange }) {
+//import { useId } from "react";
+export default function SearchForm() {
   return (
     <div>
       <p>Find contacts by name</p>

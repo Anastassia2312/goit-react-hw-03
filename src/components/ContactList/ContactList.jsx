@@ -4,7 +4,7 @@ export default function ContactList({ contacts }) {
     <ul>
       {contacts.map((contact) => {
         <li key={contact.id}>
-          <Contact info={contacts} />
+          <Contact info={contact} />
         </li>;
       })}
     </ul>
