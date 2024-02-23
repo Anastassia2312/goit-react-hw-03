@@ -12,13 +12,12 @@ const contactInfo = [
 ];
 
 function App() {
-  const [contacts, setContact] = useState(contactInfo);
   return (
     <div>
       <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />
-      <ContactList contacts={contacts} />
+      <ContactList contacts={contactInfo} />
     </div>
   );
 }
