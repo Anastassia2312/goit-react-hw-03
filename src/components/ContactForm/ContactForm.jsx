@@ -4,11 +4,13 @@ import { Formik, Form, Field } from "formik";
 export default function ContactForm({ onAdd }) {
   const usernameId = useId();
   const numberId = useId();
+
   const handleSubmit = (values, actions) => {
+    const { username, number } = values;
     onAdd({
       id: nanoid(),
-      username: values.username,
-      number: values.number,
+      username: username,
+      number: number,
     });
     actions.resetForm();
   };
