@@ -1,6 +1,6 @@
 import { useId } from "react";
 import { Formik, Form, Field } from "formik";
-export default function ContactForm({ onAdd }) {
+export default function ContactForm() {
   const usernameId = useId();
   const numberId = useId();
   const handleSubmit = (values, actions) => {
