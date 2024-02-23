@@ -9,11 +9,11 @@ function App() {
   const [contacts, setContacts] = useState(infoContacts);
   const [filter, setFilter] = useState("");
 
-  const addContact = (newContact) => {
+  /*const addContact = (newContact) => {
     setContacts((prevContact) => {
       return [...prevContact, newContact];
     });
-  };
+  };*/
 
   const filteredContacts = contacts.filter((contact) => {
     contact.name.toLowerCase().includes(filter.toLowerCase());
