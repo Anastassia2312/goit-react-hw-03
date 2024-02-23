@@ -6,13 +6,7 @@ export default function ContactForm({ onAdd }) {
   const numberId = useId();
 
   const handleSubmit = (values, actions) => {
-    const { username, number } = values;
-    onAdd({
-      id: nanoid(),
-      username: username,
-      number: number,
-    });
-    actions.resetForm();
+    console.log(values);
   };
   return (
     <Formik
