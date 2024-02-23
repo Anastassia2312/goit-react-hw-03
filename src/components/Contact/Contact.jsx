@@ -5,11 +5,11 @@ export default function Contact({ info }) {
     <div>
       <p>
         <FaUser />
-        {info.name}
+        {info.contacts.name}
       </p>
       <p>
         <FaPhoneAlt />
-        {info.number}
+        {info.contacts.number}
       </p>
       <button>Delete</button>
     </div>
