@@ -6,14 +6,14 @@ import infoContacts from "./contacts.json";
 import "./App.css";
 
 function App() {
-  const { contacts, setContacts } = useState(contactInfo);
+  const [contacts, setContacts] = useState(infoContacts);
 
   return (
     <div>
       <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />
-      <ContactList contacts={contacts} />
+      <ContactList contacts={infoContacts} />
     </div>
   );
 }
