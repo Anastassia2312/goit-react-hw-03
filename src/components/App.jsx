@@ -10,7 +10,7 @@ function App() {
   const [filter, setFilter] = useState("");
 
   const filteredContacts = contacts.filter((contact) =>
-    contact.text.toLowerCase().includes(filter.toLowerCase())
+    contact.name.toLowerCase().includes(filter.toLowerCase())
   );
   return (
     <div>
