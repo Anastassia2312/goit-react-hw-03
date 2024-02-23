@@ -1,6 +1,18 @@
 import { useId } from "react";
 import { nanoid } from "nanoid";
 import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
+
+const validationSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(3, "Too short!")
+    .max(50, "Too long!")
+    .required("Required"),
+  number: Yup.string()
+    .min(3, "Too short!")
+    .max(50, "Too long!")
+    .required("Required"),
+});
 export default function ContactForm({ onAdd }) {
   const usernameId = useId();
   const numberId = useId();
@@ -20,6 +32,7 @@ export default function ContactForm({ onAdd }) {
         number: "",
       }}
       onSubmit={handleSubmit}
+      validationSchema={validationSchema}
     >
       <Form>
         <label htmlFor={usernameId}>Name</label>
