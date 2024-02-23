@@ -6,19 +6,24 @@ export default function ContactForm({ onAdd }) {
   const numberId = useId();
 
   const handleSubmit = (values, actions) => {
-    console.log(values);
+    onAdd({
+      id: nanoid(),
+      name: values.name,
+      number: values.number,
+    });
+    actions.formReset();
   };
   return (
     <Formik
       initialValues={{
-        username: "",
+        name: "",
         number: "",
       }}
       onSubmit={handleSubmit}
     >
       <Form>
         <label htmlFor={usernameId}>Name</label>
-        <Field type="text" name="username" id={usernameId} />
+        <Field type="text" name="name" id={usernameId} />
 
         <label htmlFor={numberId}>Number</label>
         <Field type="number" name="number" id={numberId} />
