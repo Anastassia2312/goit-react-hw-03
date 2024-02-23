@@ -9,8 +9,8 @@ function App() {
   const [contacts, setContacts] = useState(infoContacts);
   const [filter, setFilter] = useState("");
 
-  const filteredContacts = contacts.filter((contacts) =>
-    contacts.text.toLowerCase().includes(filter.toLowerCase())
+  const filteredContacts = contacts.filter((contact) =>
+    contact.text.toLowerCase().includes(filter.toLowerCase())
   );
   return (
     <div>
