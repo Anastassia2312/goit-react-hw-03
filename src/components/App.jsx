@@ -1,8 +1,8 @@
 import ContactForm from "./ContactForm/ContactForm";
-import Contact from "./Contact/Contact";
 import ContactList from "./ContactList/ContactList";
 import SearchBox from "./SearchBox/SearchBox";
 import { useState } from "react";
+
 import "./App.css";
 const contactInfo = [
   { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
@@ -12,12 +12,13 @@ const contactInfo = [
 ];
 
 function App() {
+  const { contacts, setContacts } = useState(contactInfo);
   return (
     <div>
       <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox />
-      <ContactList contacts={contactInfo} />
+      <ContactList contacts={contacts} />
     </div>
   );
 }
