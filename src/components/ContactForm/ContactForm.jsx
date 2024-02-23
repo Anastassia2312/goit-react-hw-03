@@ -1,10 +1,14 @@
 import { useId } from "react";
 import { Formik, Form, Field } from "formik";
-export default function ContactForm() {
+export default function ContactForm({ onAdd }) {
   const usernameId = useId();
   const numberId = useId();
+  const handleSubmit = (values, actions) => {
+    console.log(values);
+    actions.resetForm();
+  };
   return (
-    <Formik initialValues={{}} onSubmit={{}} validationSchema={{}}>
+    <Formik initialValues={{}} onSubmit={handleSubmit} validationSchema={{}}>
       <Form>
         <label htmlFor={usernameId}>Name</label>
         <Field type="text" name="username" id={usernameId} />

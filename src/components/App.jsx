@@ -7,12 +7,15 @@ import "./App.css";
 
 function App() {
   const [contacts, setContacts] = useState(infoContacts);
-
+  const [filter, setFilter] = useState("");
+  const addContact () => {
+    
+  }
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
+      <ContactForm onAdd={addContact} />
+      <SearchBox value={filter} onFilter={setFilter } />
       <ContactList contacts={infoContacts} />
     </div>
   );
