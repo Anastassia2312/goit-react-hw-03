@@ -1,10 +1,14 @@
 import { useId } from "react";
+import { nanoid } from "nanoid";
 import { Formik, Form, Field } from "formik";
-export default function ContactForm() {
+export default function ContactForm({ onAdd }) {
   const usernameId = useId();
   const numberId = useId();
   const handleSubmit = (values, actions) => {
-    console.log(values);
+    onAdd({
+      id: nanoid(),
+      ...values,
+    });
     actions.resetForm();
   };
   return (

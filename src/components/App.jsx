@@ -9,15 +9,19 @@ function App() {
   const [contacts, setContacts] = useState(infoContacts);
   const [filter, setFilter] = useState("");
 
-  const addContact = (newContact) => {};
+  const addContact = (newContact) => {
+    setContacts((prevContact) => {
+      return [...prevContact, newContact];
+    });
+  };
 
-  const filteredContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
-  );
+  const filteredContacts = contacts.filter((contact) => {
+    contact.name.toLowerCase().includes(filter.toLowerCase());
+  });
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactForm />
+      <ContactForm onAdd={addContact} />
       <SearchBox value={filter} onFilter={setFilter} />
       <ContactList contacts={filteredContacts} />
     </div>
