@@ -18,11 +18,11 @@ export default function ContactForm({ onAdd }) {
   const numberId = useId();
 
   const handleSubmit = (values, actions) => {
-    /*onAdd({
+    onAdd({
       id: nanoid(),
       name: values.name,
       number: values.number,
-    });*/
+    });
     actions.resetForm();
   };
   return (
