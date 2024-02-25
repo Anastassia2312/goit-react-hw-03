@@ -5,6 +5,8 @@ ul {
   padding: 8px;
   border-radius: 12px;
   border: 1px solid rgba(141, 98, 46, 0.885);
+  display: flex;
+  gap: 24px;
 }
 
 .string {
