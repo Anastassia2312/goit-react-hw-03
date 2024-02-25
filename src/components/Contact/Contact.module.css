@@ -4,7 +4,7 @@ ul {
 .box {
   padding: 8px;
   border-radius: 12px;
-  border-color: rgba(141, 98, 46, 0.885);
+  border: 1px solid rgba(141, 98, 46, 0.885);
 }
 
 .string {
