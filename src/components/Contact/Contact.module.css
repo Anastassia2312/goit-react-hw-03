@@ -13,3 +13,10 @@ ul {
   display: flex;
   gap: 8px;
 }
+
+.button {
+  outline: transparent;
+  background-color: rgb(139, 110, 72);
+  border: none;
+  color: white;
+}
