@@ -20,6 +20,7 @@ ul {
   outline: transparent;
   background-color: rgb(139, 110, 72);
   border: none;
+  border-radius: 12px;
   color: white;
   font-weight: 500;
   width: 60px;
