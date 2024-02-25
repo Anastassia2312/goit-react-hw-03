@@ -1,6 +1,7 @@
 import { useId } from "react";
 import { nanoid } from "nanoid";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import css from "./ContactForm.module.css";
 import * as Yup from "yup";
 
 const validationSchema = Yup.object().shape({
@@ -38,12 +39,12 @@ export default function ContactForm({ onAdd }) {
         <div>
           <label htmlFor={usernameId}>Name</label>
           <Field type="text" name="name" id={usernameId} />
-          <ErrorMessage name="username" component="span" />
+          <ErrorMessage className={css.error} name="name" component="span" />
         </div>
         <div>
           <label htmlFor={numberId}>Number</label>
           <Field type="number" name="number" id={numberId} />
-          <ErrorMessage name="number" component="span" />
+          <ErrorMessage className={css.error} name="number" component="span" />
         </div>
         <button type="submit">Add contact</button>
       </Form>
