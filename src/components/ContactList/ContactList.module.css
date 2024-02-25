@@ -1,8 +1,6 @@
 .list {
   list-style-type: none;
-}
-
-.liItem {
   display: flex;
   gap: 12px;
+  flex-direction: column;
 }
