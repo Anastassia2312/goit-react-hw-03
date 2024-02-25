@@ -4,11 +4,11 @@ import css from "./Contact.module.css";
 export default function Contact({ info, onDelete }) {
   return (
     <div className={css.wrapper}>
-      <p>
+      <p className={css.string}>
         <FaUser />
         {info.name}
       </p>
-      <p>
+      <p className={css.string}>
         <FaPhoneAlt />
         {info.number}
       </p>
