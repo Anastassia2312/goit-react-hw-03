@@ -36,17 +36,31 @@ export default function ContactForm({ onAdd }) {
       validationSchema={validationSchema}
     >
       <Form>
-        <div>
-          <label htmlFor={usernameId}>Name</label>
-          <Field type="text" name="name" id={usernameId} />
+        <div className={css.wrapper}>
+          <label className={css.label} htmlFor={usernameId}>
+            Name
+          </label>
+          <Field
+            className={css.input}
+            type="text"
+            name="name"
+            id={usernameId}
+          />
           <ErrorMessage className={css.error} name="name" component="span" />
         </div>
-        <div>
+        <div className={css.wrapper}>
           <label htmlFor={numberId}>Number</label>
-          <Field type="number" name="number" id={numberId} />
+          <Field
+            className={css.input}
+            type="number"
+            name="number"
+            id={numberId}
+          />
           <ErrorMessage className={css.error} name="number" component="span" />
         </div>
-        <button type="submit">Add contact</button>
+        <button className={css.button} type="submit">
+          Add contact
+        </button>
       </Form>
     </Formik>
   );
