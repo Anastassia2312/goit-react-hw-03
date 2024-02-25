@@ -1,12 +1,20 @@
 import ContactForm from "./ContactForm/ContactForm";
 import ContactList from "./ContactList/ContactList";
 import SearchBox from "./SearchBox/SearchBox";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import infoContacts from "./contacts.json";
 import "./App.css";
 
+const getContactsFromLocalStorage = () => {
+  const savedContacts = localStorage.getItem("contacts");
+  if (savedContacts !== null) {
+    return JSON.parse(savedContacts);
+  }
+  return "";
+};
+
 function App() {
-  const [contacts, setContacts] = useState(infoContacts);
+  const [contacts, setContacts] = useState(getContactsFromLocalStorage);
   const [filter, setFilter] = useState("");
 
   const addContact = (newContact) => {
@@ -24,6 +32,10 @@ function App() {
   const filteredContacts = contacts.filter((contact) => {
     return contact.name.toLowerCase().includes(filter.toLowerCase());
   });
+
+  useEffect(() => {
+    localStorage.setItem("contacts", JSON.stringify(contacts));
+  }, [contacts]);
   return (
     <div>
       <h1>Phonebook</h1>
