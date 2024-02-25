@@ -1,7 +1,7 @@
-//import { useId } from "react";
+import css from "./SearchBox.module.css";
 export default function SearchForm({ value, onFilter }) {
   return (
-    <div>
+    <div className={css.wrapper}>
       <p>Find contacts by name</p>
       <input
         type="text"
