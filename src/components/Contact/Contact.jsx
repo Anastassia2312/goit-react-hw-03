@@ -1,6 +1,6 @@
 import { FaUser } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
-export default function Contact({ info }) {
+export default function Contact({ info, onDelete }) {
   return (
     <div>
       <p>
@@ -11,7 +11,7 @@ export default function Contact({ info }) {
         <FaPhoneAlt />
         {info.number}
       </p>
-      <button>Delete</button>
+      <button onClick={() => onDelete(info.id)}>Delete</button>
     </div>
   );
 }
