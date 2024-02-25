@@ -6,3 +6,8 @@ ul {
   border-radius: 12px;
   border-color: rgba(141, 98, 46, 0.885);
 }
+
+.string {
+  display: flex;
+  gap: 8px;
+}
