@@ -3,7 +3,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import css from "./Contact.module.css";
 export default function Contact({ info, onDelete }) {
   return (
-    <div className={css.wrapper}>
+    <div className={css.box}>
       <p className={css.string}>
         <FaUser />
         {info.name}

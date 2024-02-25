@@ -1,7 +1,7 @@
 ul {
   list-style-type: none;
 }
-.wrapper {
+.box {
   padding: 8px;
   border-radius: 12px;
   border-color: rgba(141, 98, 46, 0.885);
