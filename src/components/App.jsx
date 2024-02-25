@@ -5,16 +5,16 @@ import { useState, useEffect } from "react";
 import infoContacts from "./contacts.json";
 import "./App.css";
 
-/*const getContactsFromLocalStorage = () => {
+const getContactsFromLocalStorage = () => {
   const savedContacts = localStorage.getItem("contacts");
   if (savedContacts !== null) {
     return JSON.parse(savedContacts);
   }
   return "";
-};*/
+};
 
 function App() {
-  const [contacts, setContacts] = useState(infoContacts);
+  const [contacts, setContacts] = useState(getContactsFromLocalStorage);
   const [filter, setFilter] = useState("");
 
   const addContact = (newContact) => {
