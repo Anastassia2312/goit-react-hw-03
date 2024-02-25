@@ -3,7 +3,7 @@ ul {
 }
 .box {
   width: 320px;
-  padding: 8px;
+  padding: 12px;
   border-radius: 12px;
   border: 1px solid rgba(141, 98, 46, 0.885);
   display: flex;
