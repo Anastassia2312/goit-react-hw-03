@@ -29,9 +29,9 @@ function App() {
     });
   };
 
-  const filteredContacts = contacts.filter((contact) =>
-    contact.toLowerCase().includes(filter.toLowerCase())
-  );
+  const filteredContacts = contacts.filter((contact) => {
+    return contact.name.toLowerCase().includes(filter.toLowerCase());
+  });
 
   useEffect(() => {
     localStorage.setItem("contacts", JSON.stringify(contacts));
