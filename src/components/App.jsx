@@ -6,9 +6,9 @@ import infoContacts from "./contacts.json";
 import css from "./App.module.css";
 
 const initialObj = {
-  id: 0,
-  name: 0,
-  number: 0,
+  id: [0],
+  name: [0],
+  number: [0],
 };
 
 function App() {
