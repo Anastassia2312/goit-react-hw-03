@@ -12,7 +12,7 @@ const getContactsFromLocalStorage = () => {
   if (savedContacts !== null) {
     return JSON.parse(savedContacts);
   }
-  return JSON.stringify(initialObj);
+  return initialObj;
 };
 
 function App() {
