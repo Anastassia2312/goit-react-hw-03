@@ -6,19 +6,23 @@ import infoContacts from "./contacts.json";
 import css from "./App.module.css";
 
 const initialObj = {
-  id: [0],
-  name: [0],
-  number: [0],
+  id: 0,
+  name: 0,
+  number: 0,
+};
+
+const noContactsObj = [JSON.stringify(initialObj)];
+
+const getContactsFromLocalStorage = () => {
+  const savedContacts = localStorage.getItem("contacts");
+  if (savedContacts !== null) {
+    return JSON.parse(savedContacts);
+  }
+  return JSON.stringify(noContactsObj);
 };
 
 function App() {
-  const [contacts, setContacts] = useState(() => {
-    const savedContacts = localStorage.getItem("contacts");
-    if (savedContacts !== null) {
-      return JSON.parse(savedContacts);
-    }
-    return 0;
-  });
+  const [contacts, setContacts] = useState(getContactsFromLocalStorage);
   const [filter, setFilter] = useState("");
 
   const addContact = (newContact) => {
