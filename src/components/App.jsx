@@ -17,7 +17,7 @@ function App() {
     if (savedContacts !== null) {
       return JSON.parse(savedContacts);
     }
-    return JSON.stringify(initialObj);
+    return JSON.stringify(infoContacts);
   });
   const [filter, setFilter] = useState("");
 
