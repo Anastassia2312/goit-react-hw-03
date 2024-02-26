@@ -5,12 +5,18 @@ import { useState, useEffect } from "react";
 import infoContacts from "./contacts.json";
 import css from "./App.module.css";
 
+const initialObj = {
+  id: 0,
+  name: 0,
+  number: 0,
+};
+
 const getContactsFromLocalStorage = () => {
   const savedContacts = localStorage.getItem("contacts");
   if (savedContacts !== null) {
     return JSON.parse(savedContacts);
   }
-  return "";
+  return JSON.stringify(initialObj);
 };
 
 function App() {
