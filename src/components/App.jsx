@@ -11,16 +11,14 @@ const initialObj = {
   number: 0,
 };
 
-const getContactsFromLocalStorage = () => {
-  const savedContacts = localStorage.getItem("contacts");
-  if (savedContacts !== null) {
-    return JSON.parse(savedContacts);
-  }
-  return JSON.stringify(initialObj);
-};
-
 function App() {
-  const [contacts, setContacts] = useState(getContactsFromLocalStorage);
+  const [contacts, setContacts] = useState(() => {
+    const savedContacts = localStorage.getItem("contacts");
+    if (savedContacts !== null) {
+      return JSON.parse(savedContacts);
+    }
+    return JSON.stringify(initialObj);
+  });
   const [filter, setFilter] = useState("");
 
   const addContact = (newContact) => {
